@@ -12,10 +12,16 @@ const usuarios = [
 
 
 router.get('/usuario', async(req, res ) => {
+    console.log('testando');
+    res.send('testando')
     const listUsuario = await Usuario.findAll()
-
-    res.send(listUsuario)
 } )
+
+router.post('/usuario', async (req, res) => {
+    let novoUsuario = req.body;
+    novoUsuario = await Usuario.create(req.body)
+    res.send({message: "usuario cadastrado com sucesso"})
+})
 
 
 module.exports = router
