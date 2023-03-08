@@ -12,9 +12,7 @@ const usuarios = [
 
 
 router.get('/usuario', async(req, res ) => {
-    console.log('testando');
-    res.send('testando')
-    const listUsuario = await Usuario.findAll()
+    return res.json(usuarios)
 } )
 
 router.post('/usuario', async (req, res) => {
