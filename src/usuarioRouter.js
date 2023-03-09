@@ -5,10 +5,6 @@ const router = express.Router()
 const Usuario = require('./usuario')
 
 
-const usuarios = [
-    {id:1, nome: 'jhon'},
-    {id:2, nome: 'ramon'}
-]
 
 
 router.get('/listaDoBanco', async(req, res ) => {
