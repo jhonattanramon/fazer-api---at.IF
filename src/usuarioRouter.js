@@ -11,13 +11,17 @@ const usuarios = [
 ]
 
 
-router.get('/usuario', async(req, res ) => {
-    return res.json(usuarios)
+router.get('/listaDoBanco', async(req, res ) => {
+    let listaDeUsuario = await Usuario.findAll()
+
+    res.send(listaDeUsuario)
+    
 } )
 
-router.post('/usuario', async (req, res) => {
+router.post('/listaDoBanco', async (req, res) => {
     let novoUsuario = req.body;
-    novoUsuario = await Usuario.create(req.body)
+    console.log(novoUsuario);
+    novoUsuario = await Usuario.create(req.body);
     res.send({message: "usuario cadastrado com sucesso"})
 })
 

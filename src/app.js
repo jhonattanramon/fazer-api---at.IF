@@ -8,7 +8,7 @@ app.use(bodyParser.json())
 
 const usuarioRouter = require('./usuarioRouter')
 
-app.use('/usario', usuarioRouter)
+app.use('/usuario', usuarioRouter)
 
 app.listen( 8080, () => {
 
