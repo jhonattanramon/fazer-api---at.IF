@@ -22,7 +22,7 @@ router.post('/CadastrarUser', async (req, res) => {
     res.send({message: "usuario cadastrado com sucesso"})
 })
 
-router.put('/:id'), async (req, res) => {
+router.put('/:id', async (req, res) => {
     
     const idDoUsario = req.params.id
     const novosDadosDoUsario = req.body
@@ -39,7 +39,7 @@ router.put('/:id'), async (req, res) => {
 
 
 
-}
+})
 
 router.delete('/:id', async (req, res) => {
 
